@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: #e0f7fa;
+    
+}
+button{
+    width: 60px;
+    height: 40px;
+    border: none;
+    color: #fff;
+      margin-left: 20px;
+    border-radius: 15%;
+    background-color: #28a745;
+    transition:width 0.1s ease;
+    
+}
+button:hover{
+    background-color: #248838;
+    cursor: pointer;
+    width: 61px;
+    box-shadow:  0px 6px 10px rgba(0,0,0,0.2);
+    /* height: 45px; */
+  
+}
+li{
+    font-size: 20px;
+     font-family: "Playwrite US Modern", cursive;
+     position: relative;
+     left: 40px;
+     list-style-type:  none;
+     background-image: url('/assets/right.svg');
+     background-size: 20px 20px;
+     background-repeat: no-repeat;
+     background-position: 0 50%;
+     padding-left: 30px;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+}
+
+input#task{
+    width: 400px;
+    border: solid #adaaaaa5 1px;
+    height: 40px;
+
+    margin: 20px;
+    margin-right: 0;
+    box-shadow:  0px 6px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+input#check{
+    position: absolute;
+    left: 400px;
+}
+input#check:hover{
+    cursor: pointer;
+}
+.todo{
+
+}
+
+.todo:hover{
+        background-color: beige;
+        cursor: pointer;
+}
