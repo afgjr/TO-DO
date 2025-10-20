@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title>TO do</title>
 </head>
@@ -13,21 +13,21 @@
     <form action="/add" method="post">
         <input id="task" type="text" name="data" placeholder="Add Task" >
         <button type="submit">add</button>
-     
-       
-        <% if(locals.list){ %>
-              <% const ejslist=[] %>
-        <% list.forEach(function (list) {%>
-            <% if(list!==''){ %>
-            <li class="todo-<%= id %>"><%= list %> 
-                <input id="check" type="checkbox">
-            </li>
-            <% } %>
-       <% }); %>
+    
 
+        <% if(locals.list){ %>
+        <% list.forEach(function (list) {%>
+            <li class="todo_<%= list.id %>"><%= list.task %> 
+                 <input id="check" type="checkbox">
+                 <img src="/assets/edit.svg" alt="edit-icon" class="edit <%= list.id %>" >
+                 <img src="/assets/delete.svg" alt="delete-icon" class="delete <%= list.id %>" >
+                <!-- <input type="button" class="edit <%# list.id %>" value="edit"  > -->
+                <!-- <input type="button" class="delete <%# list.id %>" value="delete"  > -->
+            </li>    
+       <% }); %>
        <% } %>
-    </form>     
-    <!-- <button class="demo">demo</button> -->
-    <!-- <script src="script.js"></script>                                                                                   -->
+    </form>   
+        
+    <script src="script.js"></script>                                                                                 
 </body>
 </html>

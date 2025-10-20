@@ -11,7 +11,7 @@ button{
     height: 40px;
     border: none;
     color: #fff;
-      margin-left: 20px;
+    margin-left: 20px;
     border-radius: 15%;
     background-color: #28a745;
     transition:width 0.1s ease;
@@ -22,8 +22,6 @@ button:hover{
     cursor: pointer;
     width: 61px;
     box-shadow:  0px 6px 10px rgba(0,0,0,0.2);
-    /* height: 45px; */
-  
 }
 li{
     font-size: 20px;
@@ -36,9 +34,6 @@ li{
      background-repeat: no-repeat;
      background-position: 0 50%;
      padding-left: 30px;
-  /* font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal; */
 }
 
 input#task{
@@ -55,13 +50,21 @@ input#check{
     position: absolute;
     left: 400px;
 }
+img.edit{
+    position: absolute;
+    left: 420px;
+    width: 20px;
+    cursor: pointer;
+}
+img.delete{
+    position: absolute;
+    left: 440px;
+    width: 20px;
+    cursor: pointer;
+}
 input#check:hover{
     cursor: pointer;
 }
-.todo{
-
-}
-
 .todo:hover{
         background-color: beige;
         cursor: pointer;
