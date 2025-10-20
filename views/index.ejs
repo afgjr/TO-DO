@@ -14,15 +14,12 @@
         <input id="task" type="text" name="data" placeholder="Add Task" >
         <button type="submit">add</button>
     
-
         <% if(locals.list){ %>
         <% list.forEach(function (list) {%>
-            <li class="todo_<%= list.id %>"><%= list.task %> 
+            <li class="todo todo_<%= list.id %>"><%= list.task %> 
                  <input id="check" type="checkbox">
                  <img src="/assets/edit.svg" alt="edit-icon" class="edit <%= list.id %>" >
                  <img src="/assets/delete.svg" alt="delete-icon" class="delete <%= list.id %>" >
-                <!-- <input type="button" class="edit <%# list.id %>" value="edit"  > -->
-                <!-- <input type="button" class="delete <%# list.id %>" value="delete"  > -->
             </li>    
        <% }); %>
        <% } %>
