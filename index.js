@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 app.post('/add',(req,res)=>{
   const data=req.body.data
   if(data!==''){
-    tasks.push({id:num++,task:data})
+    tasks.push({id:num++,task:data,check:false})
   }
   res.redirect('/')
 })
@@ -29,13 +29,19 @@ app.post('/add',(req,res)=>{
 app.patch('/edit/:ID',(req,res)=>{
   const userID = parseInt(req.params.ID)
   const indexOftask=tasks.findIndex(task=>task.id===userID)
-  console.log(req.body.task)
   if(req.body.task!=='' && (req.body.task).trim()!==''){
     tasks[indexOftask].task=req.body.task
+    tasks[indexOftask].check=req.body.check
   }
   res.status(200).json({message:'successful'})
 })
 
+app.patch('/check/:ID',(req,res)=>{
+  const userID = parseInt(req.params.ID)
+  const indexOftask=tasks.findIndex(task=>task.id===userID)
+  tasks[indexOftask].check=req.body.check
+
+})
 
 app.delete('/delete/:ID',(req,res)=>{
   const userID = parseInt(req.params.ID)

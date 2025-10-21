@@ -44,8 +44,8 @@ input#task{
 input#check{
     position: absolute;
     left: 400px;
-
 }
+
 img.edit{
     position: absolute;
     left: 420px;
@@ -70,5 +70,5 @@ input#check:hover{
 }
 .todo:hover{
         background-color: beige;
-        cursor: pointer;
+        /* cursor: pointer; */
 }

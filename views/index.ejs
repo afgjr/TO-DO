@@ -17,7 +17,12 @@
         <% if(locals.list){ %>
         <% list.forEach(function (list) {%>
             <li class="todo todo_<%= list.id %>"><%= list.task %> 
-                 <input id="check" type="checkbox">
+                 <% if(list.check) {%>
+                    <input id="check" type="checkbox" checked onchange="check_box(<%=list.id%>,this.checked)">
+                <% } else { %>
+                    <input id="check" type="checkbox"  onchange="check_box(<%=list.id%>,this.checked)">
+                <% } %>
+                
                  <img src="/assets/edit.svg" alt="edit-icon" class="edit <%= list.id %>" >
                  <img src="/assets/delete.svg" alt="delete-icon" class="delete <%= list.id %>" >
             </li>    

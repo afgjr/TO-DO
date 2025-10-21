@@ -6,7 +6,7 @@ edits.forEach(edit=>{
         const ID=(e.target.classList)[1]
         const url=`http://localhost:3000/edit/${ID}`
         const newTask=prompt('Enter Your Task!')
-        const update={task:newTask}
+        const update={task:newTask,check:false}
 
         fetch(url,{
             method:'PATCH',
@@ -37,3 +37,25 @@ remove.forEach(rem=>{
         })
     })
 })
+
+function check_box(ID,isChecked){
+    const url=`http://localhost:3000/check/${ID}`
+    fetch(url,{
+        method:'PATCH',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify({check:isChecked})
+    })
+
+}
+
+// const check_box=document.querySelectorAll('#check')
+
+// check_box.forEach(check=>{
+//    check.addEventListener('change',()=>{
+//         if(this.checked){
+//             console.log('checked')
+//         }
+//    })
+// })
